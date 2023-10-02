@@ -1,0 +1,19 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo do peso ideal</title>
+</head>
+<body>
+    <form method="$_GET" action="calcular_peso.php">
+        <label for="altura">Informe a altura (em metros):</label>
+        <input type="number" step="0.01" name="altura" id="altura" required>
+        <br>
+        <label>Informe o sexo:</label>
+        <input type="radio" name="sexo" value="M" required> Masculino
+        <input type="radio" name="sexo" value="F" required> Feminino
+        <br>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>
