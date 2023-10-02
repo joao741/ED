@@ -1,24 +1,17 @@
-html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Cálculo da média do aluno</title>
-</head>
-<body>
-    <form method="post" action="calcular_media.php">
-        <label for="nota1">Informe a nota da prova 1:</label>
-        <input type="number" step="0.01" name="nota1" id="nota1" required>
-        <br>
-        <label for="nota2">Informe a nota da prova 2:</label>
-        <input type="number" step="0.01" name="nota2" id="nota2" required>
-        <br>
-        <label for="nota3">Informe a nota da prova 3:</label>
-        <input type="number" step="0.01" name="nota3" id="nota3" required>
-        <br>
-        <label for="nota4">Informe a nota da prova 4:</label>
-        <input type="number" step="0.01" name="nota4" id="nota4" required>
-        <br>
-        <button type="submit">Calcular</button>
-    </form>
-</body>
-</html>
+<?php
+    // Lendo as notas das provas
+    $nota1 = $_GET['nota1'];
+    $nota2 = $_GET['nota2'];
+    $nota3 = $_GET['nota3'];
+    $nota4 = $_GET['nota4'];
+
+    // Calculando a média
+    $media = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
+
+    // Verificando se o aluno foi aprovado ou reprovado
+    if ($media >= 5) {
+        echo "Aluno aprovado com média " . $media;
+    } else {
+        echo "Aluno reprovado com média " . $media;
+    }
+    ?>
